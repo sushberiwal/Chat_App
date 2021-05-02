@@ -18,6 +18,7 @@ socket.on("join" , function(dataObj){
     joinDiv.classList.add("join");
     joinDiv.textContent = `${dataObj.username} joined chat`;
     chatWindow.append(joinDiv);
+    chatWindow.scrollTop = chatWindow.scrollHeight;
     addInOnlineList(dataObj);
 })
 
